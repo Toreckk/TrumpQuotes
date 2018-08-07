@@ -1,16 +1,19 @@
-
+body{
+  background-image:url("http://www.desktop-screens.com/data/out/34/2780908-donald-trump-wallpapers.jpg");
+  background-size: cover;
+}
 .container{
   height:100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 #quote-box{
-  background: white;
+  background:rgba(255,255,255,0.75);
   border-radius: 10px;
   width:640px;
-  height:40vh;
 }
 
 #header{
@@ -59,8 +62,10 @@ p{
 #retweet-button:hover{
   background-color:#e6ecf0;
 }
+#retweet-button:focus {outline:0;}
 #body{
-  padding-left:2em;
-  padding-top:-3em;
-  
+  padding:0 2em;
+  margin-bottom: 2em;
+  font-size: 27px;
+  animation-duration: 3s;
 }

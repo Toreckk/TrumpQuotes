@@ -6,8 +6,16 @@ class App extends Component {
   constructor(props){
       super(props);
       this.state = {
-        message:'Hi I\'m Donald Trump!'
+        message:'When Mexico sends its people, they\'re not sending their best. They\'re sending people that have lots of problems...they\'re bringing drugs, they\'re bringing crime. They\'re rapists.'
       }
+      this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    fetch('https://api.whatdoestrumpthink.com/api/v1/quotes/random')
+      .then( results  => results.json())
+      .then(jsondata => {this.setState({
+        message:jsondata.message
+      });});
   }
   render() {
     return (
@@ -23,8 +31,9 @@ class App extends Component {
                       <p style={{color:'#8695a1'}}>@realDonaldTrump</p>
                   </div>
               </div>
-              <div id="retweet">
-                  <button id="retweet-button"><strong>New Quote!</strong></button>
+              <div id="retweet" >
+                <button id="retweet-button" onClick={this.handleClick}><strong>New Quote!</strong></button>
+                <i class="fas fa-retweet"></i>
               </div>
           </div>
           <div id="body">
