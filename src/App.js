@@ -19,8 +19,8 @@ class App extends Component {
                       <img src='https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_bigger.jpg'/>
                   </div>
                   <div id="user-info">
-                  <a href="https://twitter.com/realDonaldTrump"><p><strong>Donald J. Trump</strong></p></a>
-                      <p>@realDonaldTrump</p>
+                  <a id="user-handle" href="https://twitter.com/realDonaldTrump"><p><strong>Donald J. Trump</strong></p></a>
+                      <p style={{color:'#8695a1'}}>@realDonaldTrump</p>
                   </div>
               </div>
               <div id="retweet">

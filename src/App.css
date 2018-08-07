@@ -10,13 +10,13 @@
   background: white;
   border-radius: 10px;
   width:640px;
-  height:50vh;
+  height:40vh;
 }
 
 #header{
   display: flex;
   justify-content: space-between;
-  padding:1em 0 0 1em;
+  
 }
 
 #info{
@@ -24,16 +24,31 @@
 }
 
 img{
+  padding:1em;
   border-radius:50%;
 }
-#user-info{
-  margin-top:-0.5em;
-  margin-left:0.5em;
 
+
+p{
+  margin:0;
 }
-
+#user-info{
+  margin-top:2em;
+}
+#user-handle{
+  text-decoration: none;
+  color:black;
+  font-size:1.3rem;
+}
+#user-handle:hover{
+  text-decoration: underline;
+  color:#1b95e0;
+}
+#retweet{
+  padding:1em;
+}
 #retweet-button{
-  margin:1em;
+  margin:1.5em 1em;
   border: 1px solid #1b95e0;
   border-radius: 25px;
   color:#1b95e0;
