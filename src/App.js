@@ -14,7 +14,7 @@ class App extends Component {
     fetch('https://api.whatdoestrumpthink.com/api/v1/quotes/random')
       .then( results  => results.json())
       .then(jsondata => {this.setState({
-        message:jsondata.message
+        message: jsondata.message
       });});
   }
   render() {
@@ -27,19 +27,24 @@ class App extends Component {
                       <img src='https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_bigger.jpg'/>
                   </div>
                   <div id="user-info">
-                  <a id="user-handle" href="https://twitter.com/realDonaldTrump"><p><strong>Donald J. Trump</strong></p></a>
+                  <a  href="https://twitter.com/realDonaldTrump"><p id="author"><strong>Donald J. Trump</strong></p></a>
                       <p style={{color:'#8695a1'}}>@realDonaldTrump</p>
                   </div>
               </div>
-              <div id="retweet" >
-                <button id="retweet-button" onClick={this.handleClick}><strong>New Quote!</strong></button>
-                <i class="fas fa-retweet"></i>
+              <div id="new-quote-div" >
+                <button id="new-quote" onClick={this.handleClick}><strong>New Quote!</strong></button>
+                
               </div>
           </div>
-          <div id="body">
-                  <p>{this.state.message}</p>
+          <div id="message-area">
+                  <p id="text">{this.state.message}</p>
           </div>
+          <div id="footer">
+            <a id="tweet-quote" target="blank" href={'https://twitter.com/intent/tweet?text=' + encodeURIComponent("\"" + this.state.message + "\" -" + this.state.author)}><i className="fas fa-retweet"></i></a>
+          </div>
+          
         </div>
+        
       </div>
     );
   }
